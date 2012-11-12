@@ -7,15 +7,7 @@
 		<ul id="lottoNumbers">
 		</ul>
 		<script type="text/javascript">
-			var numbers = get_lotto_numbers(6);
-			var list = "";
-			var unorderedList = document.getElementById('lottoNumbers');
-
-			for (var i = 0; i < numbers.length; i++) {
-				list += "<li>"  + numbers[i] + "</li>";
-			}
-
-			unorderedList.innerHTML = list;
+			document.getElementById('lottoNumbers').innerHTML = create_lotto_listItems();
 		</script>
 	</body>
 	
