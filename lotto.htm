@@ -1,8 +1,22 @@
-<DOCTYPE! html>
-	<head><script type="text/javascript" src="lotto.js"></script></head>
+<!DOCTYPE html>
+<html>
+	<head>
+		<script type="text/javascript" src="lotto.js"></script>
+	</head>
 	<body>
+		<ul id="lottoNumbers">
+		</ul>
 		<script type="text/javascript">
 			var numbers = get_lotto_numbers(6);
+			var list = "";
+			var unorderedList = document.getElementById('lottoNumbers');
+
+			for (var i = 0; i < numbers.length; i++) {
+				list += "<li>"  + numbers[i] + "</li>";
+			}
+
+			unorderedList.innerHTML = list;
 		</script>
 	</body>
+	
 </html>

@@ -11,6 +11,3 @@ function get_lotto_numbers(num){
 var generateLottoNumber = function(){
 	return Math.floor(Math.random() *49 +1);
 };
-
-//console.log(generateLottoNumbers(6));
-//console.log(generateLottoNumbers(7));
