@@ -1,4 +1,4 @@
-var generateLottoNumbers = function(num){
+function get_lotto_numbers(num){
 	var numbers = [];
 	
 	for(var i = 0; i<num; i++){
@@ -12,5 +12,5 @@ var generateLottoNumber = function(){
 	return Math.floor(Math.random() *49 +1);
 };
 
-console.log(generateLottoNumbers(6));
-console.log(generateLottoNumbers(7));
+//console.log(generateLottoNumbers(6));
+//console.log(generateLottoNumbers(7));
