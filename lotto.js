@@ -2,10 +2,13 @@ function get_lotto_numbers(num){
 	var numbers = [];
 	
 	for(var i = 0; i<num; i++){
+
 		var n = generateLottoNumber();
-		if (numbers.indexOf(n) === -1) { 
-			numbers.push(n); 
-		}; 
+
+		while (numbers.indexOf(n) > -1) {
+			n = generateLottoNumber();
+		}
+		numbers.push(n);
 	}
 	
 	return numbers;
