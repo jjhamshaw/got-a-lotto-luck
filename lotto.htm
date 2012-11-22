@@ -2,27 +2,13 @@
 <html>
 	<head>
 		<script type="text/javascript" src="lotto.js"></script>
-		<style type="text/css">
-			body {font-family: Helvetica, sans-serif}
-
-			#lottoNumbers li {
-				width: 50px;
-				height: 50px;
-				font-size: 30px;
-				text-align: center;
-				list-style-type: none;
-				float:left;
-				margin-left: 15px;
-				padding-top: 5px;
-				background-image: url(lotto_ball.png);
-				background-repeat: no-repeat;
-				background-size: 100%;
-			}
-		</style>
+		<link rel="stylesheet" type="text/css" href="styles.css" />
 	</head>
 	<body>
-		<ul id="lottoNumbers">
-		</ul>
+		<h1>Lotto number picker</h1>
+		<section>
+			<ul id="lottoNumbers"></ul>
+		</section>
 		<script type="text/javascript">
 			document.getElementById('lottoNumbers').innerHTML = create_lotto_listItems();
 		</script>
