@@ -6,11 +6,15 @@
 	</head>
 	<body>
 		<h1>Lotto number picker</h1>
-		<section>
-			<ul id="lottoNumbers"></ul>
+		<section id="lottoNumbers">
+			<ul id="lottoNumberList"></ul>
+			<button type="button" onclick="updateNumbers()">generate numbers</button>
 		</section>
 		<script type="text/javascript">
-			document.getElementById('lottoNumbers').innerHTML = create_lotto_listItems();
+		function updateNumbers (){
+			document.getElementById('lottoNumberList').innerHTML = create_lotto_listItems();
+		}
+			updateNumbers();
 		</script>
 	</body>
 	
