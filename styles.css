@@ -2,9 +2,16 @@ body {
 	font-family: Helvetica, sans-serif
 }
 
+#lottoNumbers {
+	max-width: 470px;
+	margin-left: auto;
+	margin-right: auto;
+}
+
 #lottoNumbers button {
+	margin-top: 15px;
 	width: 100%;
-	font-size: 50px;
+	font-size: 40px;
 }
 
 #lottoNumberList li {
