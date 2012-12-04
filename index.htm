@@ -4,18 +4,15 @@
 		<script type="text/javascript" src="lotto.js"></script>
 		<link rel="stylesheet" type="text/css" href="styles.css" />
 	</head>
-	<body>
-		
+	<body>		
 		<section id="lottoNumbers">
 			<h1>Lotto number picker</h1>
 			<ul id="lottoNumberList"></ul>
-			<button type="button" onclick="updateNumbers()">give me numbers</button>
+			<button id="lottoBtn" type="button">give me numbers</button>
 		</section>
 		<script type="text/javascript">
-		function updateNumbers (){
-			document.getElementById('lottoNumberList').innerHTML = create_lotto_listItems();
-		}
-			updateNumbers();
+			var lottoBtn = document.getElementById('lottoBtn');
+			lottoBtn.addEventListener("click", function(){create_lotto_listItems()}, true);
 		</script>
 	</body>
 	
