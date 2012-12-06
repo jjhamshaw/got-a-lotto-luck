@@ -1,11 +1,11 @@
 body {
 	font-family: Helvetica, sans-serif;
 	max-width: 470px;
+	margin-left: auto;
+	margin-right: auto;
 }
 
 #lottoNumbers {
-	margin-left: auto;
-	margin-right: auto;
 }
 
 #lottoNumbers button {
