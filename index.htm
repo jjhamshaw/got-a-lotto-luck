@@ -13,6 +13,19 @@
 		<script type="text/javascript">
 			var lottoBtn = document.getElementById('lottoBtn');
 			lottoBtn.addEventListener("click", function(){create_lotto_listItems()});
+
+			function create_lotto_listItems(){
+				var generator = new LottoNumberGenerator();
+				var numbers = generator.sixLottoNumbers;
+				var list = "";
+				
+				for (var i = 0; i < numbers.length; i++) {
+					list += "<li>"  + numbers[i] + "</li>";
+				}
+
+				var unorderedList = document.getElementById('lottoNumberList');
+				unorderedList.innerHTML = list;
+			};
 		</script>
 	</body>
 	

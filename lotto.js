@@ -1,31 +1,22 @@
-function get_lotto_numbers(num){
-	var numbers = [];
-	
-	for(var i = 0; i<num; i++){
+function LottoNumberGenerator(){
+	this.sixLottoNumbers = getRandomLottoNumbers(6);
 
-		var n = generateLottoNumber();
+	function getRandomLottoNumbers(num){
+		var numbers = [];
+		
+		for(var i = 0; i<num; i++){
+			var n = getRandomLottoNumber();
 
-		while (numbers.indexOf(n) > -1) {
-			n = generateLottoNumber();
+			while (numbers.indexOf(n) > -1) {
+				n = getRandomLottoNumber();
+			}
+			numbers.push(n);
 		}
-		numbers.push(n);
-	}
-	
-	return numbers;
-};
+		
+		return numbers;
+	};
 
-function create_lotto_listItems(){
-	var numbers = get_lotto_numbers(6);
-	var list = "";
-	
-	for (var i = 0; i < numbers.length; i++) {
-		list += "<li>"  + numbers[i] + "</li>";
-	}
-
-	var unorderedList = document.getElementById('lottoNumberList');
-	unorderedList.innerHTML = list;
-};
-
-var generateLottoNumber = function(){
-	return Math.floor(Math.random() *49 +1);
+	function getRandomLottoNumber(){
+		return Math.floor(Math.random() *49 +1);
+	};
 };
